@@ -1,13 +1,13 @@
 
 import './App.css';
-import Nav from './Nav';
+import Nav from './Component/NavBar/Nav';
 
 import { Routes, Route} from "react-router-dom";
-import Contact from "./components/NavBar/Contact";
-import Home from "./components/NavBar/Home";
-import Portfolio from "./components/NavBar/Portfolio";
-import Resume from "./components/NavBar/Resume";
-import Services from "./components/NavBar/Services";
+import Contact from "./Sections/Contact/Contact";
+import Home from "./Sections/Home/Home";
+import Portfolio from "./Sections/Portfolio/Portfolio";
+import Resume from "./Sections/Resume/Resume";
+import Services from "./Sections/Services/Services";
 
 
 
