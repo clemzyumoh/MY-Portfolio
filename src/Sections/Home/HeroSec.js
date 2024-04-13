@@ -9,7 +9,6 @@ import { AiOutlineDownload } from "react-icons/ai";
 import { useMediaQuery } from "@react-hook/media-query";
 import ClickableContent from "../../Component/ClickableContent";
 import file from "../../Assets/images/Resume1.pdf";
-import "animate.css";
 
 function Hero() {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -27,11 +26,7 @@ function Hero() {
         >
           <div
             className={
-              isMobile
-                ? "paper2-1 animate__animated animate__slideInLeft animate__slower	3s"
-                : isTablet
-                ? "paper2 animate__animated animate__slideInLeft animate__slower	3s"
-                : "paper2 animate__animated animate__slideInLeft animate__slower	3s"
+              isMobile ? "paper2-1 " : isTablet ? "paper2 " : "paper2 "
             }
           >
             <div className="paper1">
@@ -116,10 +111,10 @@ function Hero() {
             <div
               className={
                 isMobile
-                  ? "description1 animate__animated animate__slideInLeft animate__slower	3s"
+                  ? "description1 "
                   : isTablet
-                  ? "description animate__animated animate__backInDown animate__slower	3s"
-                  : "description animate__animated animate__backInDown animate__slower	3s"
+                  ? "description "
+                  : "description "
               }
             >
               <div
@@ -161,12 +156,12 @@ function Hero() {
                 </div>
               </div>
             </div>
-            <div className="container-year  animate__animated animate__slideInRight animate__slower	3s">
+            <div className="container-year  ">
               <div className="year-wrap">
                 <StyledText fontSize="2rem" $margin="10px" color="#15DEC2">
                   <h3>4</h3>
                 </StyledText>
-                <div className="dscription-container">
+                <div className="description-container">
                   <p>
                     Programming <br /> Language
                   </p>
@@ -176,7 +171,7 @@ function Hero() {
                 <StyledText fontSize="2rem" $margin="10px" color="#15DEC2">
                   <h3>2</h3>
                 </StyledText>
-                <div className="dscription-container">
+                <div className="description-container">
                   <p>
                     Development <br /> Tools
                   </p>
@@ -186,7 +181,7 @@ function Hero() {
                 <StyledText fontSize="2rem" $margin="10px" color="#15DEC2">
                   <h3>1</h3>
                 </StyledText>
-                <div className="dscription-container">
+                <div className="description-container">
                   <p>
                     Years of <br /> Experience
                   </p>
@@ -209,6 +204,7 @@ const Main = styled.div`
   background-color: #292f36;
   margin: 0px;
   padding: 30px;
+  overflow-x: hidden;
   color: white;
   .title-hero {
     color: #98faec;

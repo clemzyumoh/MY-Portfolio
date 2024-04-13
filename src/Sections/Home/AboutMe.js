@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Background from "../../Assets/images/AboutMe.png";
 import StyledText from "../../Component/Brand1";
 import { useMediaQuery } from "@react-hook/media-query";
-import "animate.css";
 
 function AboutMe() {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -29,15 +28,15 @@ function AboutMe() {
             <div
               className={
                 isMobile
-                  ? "aboutme-containermobile animate__animated animate__slideInLeft animate__slower	3s"
+                  ? "aboutme-containermobile "
                   : isTablet
-                  ? "aboutme-container animate__animated animate__slideInLeft animate__slower	3s"
-                  : "aboutme-container animate__animated animate__slideInLeft animate__slower	3s"
+                  ? "aboutme-container "
+                  : "aboutme-container "
               }
             >
               <h1>About Me</h1>
             </div>
-            <div className="content-container animate__animated animate__slideInLeft animate__slower	3s">
+            <div className="content-container ">
               <StyledText color="#98FAEC" fontSize="2rem" $margin="3px">
                 <p>Hello!</p>
               </StyledText>
@@ -80,13 +79,7 @@ function AboutMe() {
             </div>
           </div>
           <img
-            className={
-              isMobile
-                ? "img-mobile animate__animated animate__slideInRight animate__slower	3s"
-                : isTablet
-                ? "img animate__animated animate__slideInRight animate__slower	3s"
-                : "img animate__animated animate__slideInRight animate__slower	3s"
-            }
+            className={isMobile ? "img-mobile " : isTablet ? "img " : "img "}
             src={require("../../Assets/images/About me image.png")}
             alt="images"
           />

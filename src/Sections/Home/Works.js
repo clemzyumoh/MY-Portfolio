@@ -7,7 +7,6 @@ import UnderLine from "../../Component/Line";
 import ClickableContent from "../../Component/ClickableContent";
 import { useMediaQuery } from "@react-hook/media-query";
 import NavBtn from "../../Component/NavBtn";
-import "animate.css";
 
 function Works({ isVisible }) {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -18,7 +17,7 @@ function Works({ isVisible }) {
       <Main>
         <div className="work-container">
           <div className="heading-container">
-            <div className="heading  animate__animated animate__bounce">
+            <div className="heading  ">
               <StyledText fontSize="1.5rem" color="#15DEC2">
                 <h1>Portfolio</h1>
               </StyledText>
@@ -35,17 +34,10 @@ function Works({ isVisible }) {
                 : "project-container"
             }
           >
-            <ClickableContent
-              className="animate__animated animate__slideInLeft"
-              url="https://65eb9688aaf1ae28d6f26a45--relaxed-elf-173c53.netlify.app/"
-            >
+            <ClickableContent url="https://65eb9688aaf1ae28d6f26a45--relaxed-elf-173c53.netlify.app/">
               <img
                 className={
-                  isMobile
-                    ? "img-mobile animate__animated animate__slideInLeft animate__slower	3s"
-                    : isTablet
-                    ? "img animate__animated animate__slideInLeft animate__slower	3s "
-                    : "img animate__animated animate__slideInLeft animate__slower	3s"
+                  isMobile ? "img-mobile " : isTablet ? "img " : "img "
                 }
                 src={require("../../Assets/images/restaurant-Image.png")}
                 alt="images"
@@ -157,11 +149,7 @@ function Works({ isVisible }) {
             <ClickableContent url="https://ecommerce-email.onrender.com">
               <img
                 className={
-                  isMobile
-                    ? "img-mobile animate__animated animate__slideInRight animate__slower	3s"
-                    : isTablet
-                    ? "img animate__animated animate__slideInRight animate__slower	3s"
-                    : "img animate__animated animate__slideInRight animate__slower	3s"
+                  isMobile ? "img-mobile " : isTablet ? "img " : "img "
                 }
                 src={require("../../Assets/images/email-Image.png")}
                 alt="images"
@@ -191,6 +179,7 @@ const Main = styled.div`
   margin: 0px;
   padding: 0px;
   color: white;
+  overflow-x: hidden;
   .work-container {
     display: flex;
     justify-content: center;
