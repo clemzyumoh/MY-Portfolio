@@ -161,7 +161,7 @@ function Hero() {
                 <StyledText fontSize="2rem" $margin="10px" color="#15DEC2">
                   <h3>4</h3>
                 </StyledText>
-                <div className="description-container">
+                <div className="description-contain">
                   <p>
                     Programming <br /> Language
                   </p>
@@ -171,7 +171,7 @@ function Hero() {
                 <StyledText fontSize="2rem" $margin="10px" color="#15DEC2">
                   <h3>2</h3>
                 </StyledText>
-                <div className="description-container">
+                <div className="description-contain">
                   <p>
                     Development <br /> Tools
                   </p>
@@ -181,7 +181,7 @@ function Hero() {
                 <StyledText fontSize="2rem" $margin="10px" color="#15DEC2">
                   <h3>1</h3>
                 </StyledText>
-                <div className="description-container">
+                <div className="description-contain">
                   <p>
                     Years of <br /> Experience
                   </p>
@@ -400,6 +400,13 @@ const Main = styled.div`
     align-items: start;
     flex-direction: column;
     margin-right: 140px;
+  }
+  .description-contain {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    margin: 10px;
   }
   .description-container1 {
     display: flex;
